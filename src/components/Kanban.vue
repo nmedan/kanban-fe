@@ -60,7 +60,6 @@ export default {
   },
 
   methods: { 
-    
 	  checkMove(evt) { 
       return true;        
 	  },
@@ -182,7 +181,7 @@ export default {
   }
   
   .dragArea {
-     min-height:20px;
+    min-height:20px;
   }
    
   .card-number {
