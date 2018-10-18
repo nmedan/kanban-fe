@@ -7,8 +7,8 @@
         <input placeholder="No limit" v-model="column.capacity" type="number" :min="column.cards.length" @input="setCapacity(column.id, column)"></input>
       </form>
       <draggable v-if="column.cards" v-model="column.cards" class="dragArea" :move="checkMove" :options="{group: 'columns'}"  :column="column" :colId="column.id" :colCapacity="column.capacity" :cardsNumber="column.cards.length" @add="onAdd($event, column)" @update="onUpdate(column.id, column)"> 
-	      <div class="kanbon-card" v-for="card in column.cards" :key="card.id" :cardId="card.id"> 
-	      </div>
+        <div class="kanbon-card" v-for="card in column.cards" :key="card.id" :cardId="card.id"> 
+	</div>
       </draggable>
     </div>
     <hr></hr>
@@ -46,13 +46,20 @@ export default {
   
   data() {
     return {	  
+<<<<<<< HEAD
 	    columns: [],
 	    card: {
 	      column: {id: '', name: '', capacity: null, cards: []}
 	    },
+=======
+      columns: [],
+      card: {
+        column: {id: '', name: '', capacity: null, cards:[]}
+      },
+>>>>>>> 1070754b5c086237c19b81dce212f8ef8325136f
       capacities: [],    
     }
-	},
+  },
   
   created() {
     columns.getAll().then(response=>
@@ -60,9 +67,9 @@ export default {
   },
 
   methods: { 
-	  checkMove(evt) { 
-      return true;        
-	  },
+    checkMove(evt) { 
+      return true;         
+    },
     
     setCapacity(id, column) {
       if (!column.capacity || (column.capacity >= column.cards.length)) {
@@ -80,10 +87,15 @@ export default {
         (this.columns=response.data))        
       }
     },
+<<<<<<< HEAD
  
 	  addCard() {   
+=======
+
+    addCard() {   
+>>>>>>> 1070754b5c086237c19b81dce212f8ef8325136f
       if (!this.card.column.capacity || (this.card.column.capacity > this.card.column.cards.length)) {
-	      cards.add(this.card.column.id, this.card)
+        cards.add(this.card.column.id, this.card)
         .then(
           ()=>
           {
@@ -95,8 +107,8 @@ export default {
       else {
         alert('Not enough capacity')         
       }
-	    this.card = {};
-	  },
+      this.card = {};
+    },
   
     onAdd(event, column) {
       let cardId = event.item.getAttribute('cardId');
@@ -155,12 +167,12 @@ export default {
   
   .board {
     width:340px;
-	  borders: 1px solid black;
-	  text-align:center;
-	  background-color:blue;
-	  display:inline-block;
-	  vertical-align:top;
-	  margin-right: 10px;
+    borders: 1px solid black;
+    text-align:center;
+    background-color:blue;
+    display:inline-block;
+    vertical-align:top;
+    margin-right: 10px;
     padding:10px;
   }
   
@@ -172,10 +184,10 @@ export default {
   }
   
   .kanbon-card {
-	  background-color:lightgray;
-	  margin-left:10px;
-	  margin-right:10px;
-	  vertical-align:middle;
+    background-color:lightgray;
+    margin-left:10px;
+    margin-right:10px;
+    vertical-align:middle;
     padding-bottom:20px;
     padding-top:20px;
     margin-bottom:10px;
