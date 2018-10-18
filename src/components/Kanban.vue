@@ -46,15 +46,10 @@ export default {
   
   data() {
     return {	  
-	    columns: [],
-	    card: {
-	      column: {id: '', name: '', capacity: null, cards: []}
-	    },
       columns: [],
       card: {
         column: {id: '', name: '', capacity: null, cards:[]}
-      },
-      capacities: [],    
+      },    
     }
   },
   
