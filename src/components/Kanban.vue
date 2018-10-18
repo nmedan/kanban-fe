@@ -48,7 +48,7 @@ export default {
     return {	  
 	    columns: [],
 	    card: {
-	      column: {id: '', name: '', capacity: null, cards:[]}
+	      column: {id: '', name: '', capacity: null, cards: []}
 	    },
       capacities: [],    
     }
@@ -71,7 +71,7 @@ export default {
           ()=>
           {
             columns.getAll().then(response=>
-            (this.columns=response.data))         
+            (this.columns=response.data))       
           }
         )
       }
@@ -80,7 +80,7 @@ export default {
         (this.columns=response.data))        
       }
     },
-
+ 
 	  addCard() {   
       if (!this.card.column.capacity || (this.card.column.capacity > this.card.column.cards.length)) {
 	      cards.add(this.card.column.id, this.card)
@@ -88,7 +88,7 @@ export default {
           ()=>
           {
             columns.getAll().then(response=>
-            (this.columns=response.data))  
+            (this.columns=response.data))
           }
         )
       }
@@ -102,6 +102,7 @@ export default {
       let cardId = event.item.getAttribute('cardId');
       let colToId = event.to.getAttribute('colId');
       let colFromId = event.from.getAttribute('colId');
+      
       if (!column.capacity || (column.capacity >= column.cards.length)) {
         cards.changeColumn(cardId, colToId)
         .then(

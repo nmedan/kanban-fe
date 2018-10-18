@@ -7,6 +7,6 @@
     "\\src\\components",
     "\\src\\services"
   ],
-  "SelectedNode": "\\src\\services\\Cards.js",
+  "SelectedNode": "\\src\\components\\Kanban.vue",
   "PreviewInSolutionExplorer": false
 }
