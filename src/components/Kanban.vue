@@ -46,17 +46,14 @@ export default {
   
   data() {
     return {	  
-<<<<<<< HEAD
 	    columns: [],
 	    card: {
 	      column: {id: '', name: '', capacity: null, cards: []}
 	    },
-=======
       columns: [],
       card: {
         column: {id: '', name: '', capacity: null, cards:[]}
       },
->>>>>>> 1070754b5c086237c19b81dce212f8ef8325136f
       capacities: [],    
     }
   },
@@ -87,13 +84,8 @@ export default {
         (this.columns=response.data))        
       }
     },
-<<<<<<< HEAD
- 
-	  addCard() {   
-=======
 
     addCard() {   
->>>>>>> 1070754b5c086237c19b81dce212f8ef8325136f
       if (!this.card.column.capacity || (this.card.column.capacity > this.card.column.cards.length)) {
         cards.add(this.card.column.id, this.card)
         .then(
