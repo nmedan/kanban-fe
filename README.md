@@ -9,7 +9,8 @@ This is front-end for kanban board application. For creating this, next technolo
 ## Installation
 
 ### Requirements
-*Node.js >=6.3.0
+* Node.js 
+* npm
 
 ### Project setup
 
