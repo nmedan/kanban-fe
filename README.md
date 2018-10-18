@@ -30,7 +30,7 @@ To install draggable component, type in command line:
 
 $npm install vuedraggable
 
-To find more about this component, go to [Vue Draggable](https://www.npmjs.com/package/vuedraggable)
+To find more about this component, go to [Vue Draggable](https://www.npmjs.com/package/vuedraggable) .
 
 ## Running
 
